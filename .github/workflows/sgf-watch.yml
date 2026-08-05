@@ -1,0 +1,57 @@
+# .github/workflows/sgf-watch.yml
+#
+# Runs sgf_watch.py every hour on GitHub's runners, so nothing needs to be
+# powered on at home. State is committed back to the repo between runs.
+#
+# Setup:
+#   1. Put sgf_watch.py at the repo root (a small private repo is ideal).
+#   2. Repo → Settings → Secrets and variables → Actions → New repository secret
+#        Name:  NTFY_TOPIC
+#        Value: your ntfy topic, e.g. sgf-2026-enes-8f3k
+#   3. Repo → Settings → Actions → General → Workflow permissions
+#        → "Read and write permissions"  (needed to commit the state file)
+#   4. Commit this file to .github/workflows/sgf-watch.yml
+#   5. Actions tab → "SGF 2026 watcher" → Run workflow (arms the baseline)
+
+name: SGF 2026 watcher
+
+on:
+  schedule:
+    - cron: "17 * * * *"   # every hour at :17 (off-peak minutes run sooner)
+  workflow_dispatch:        # lets you trigger a run by hand
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sgf-watch
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Check the festival site
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+        run: python3 sgf_watch.py
+
+      - name: Persist state
+        run: |
+          if [ -n "$(git status --porcelain sgf_watch_state.json)" ]; then
+            git config user.name  "sgf-watch-bot"
+            git config user.email "sgf-watch-bot@users.noreply.github.com"
+            git add sgf_watch_state.json
+            git commit -m "sgf-watch: state $(date -u +%Y-%m-%dT%H:%MZ)"
+            git pull --rebase --autostash
+            git push
+          else
+            echo "no state change"
+          fi
