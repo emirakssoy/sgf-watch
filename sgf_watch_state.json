@@ -1,0 +1,46 @@
+{
+  "started": "2026-08-05T11:52:01.073033+00:00",
+  "pages": {
+    "https://www.studentgamesfestival.com/": {
+      "hash": "63fc4929255e1c19",
+      "len": 2048
+    },
+    "https://www.studentgamesfestival.com/programme": {
+      "hash": "50780984d4282ede",
+      "len": 1056
+    },
+    "https://www.studentgamesfestival.com/jury": {
+      "hash": "76da94b877d123af",
+      "len": 12739
+    },
+    "https://www.studentgamesfestival.com/regulations": {
+      "hash": "3251e07e476b2846",
+      "len": 10851
+    }
+  },
+  "sitemap_urls": [
+    "https://www.studentgamesfestival.com/2025-winners",
+    "https://www.studentgamesfestival.com/2025jury",
+    "https://www.studentgamesfestival.com/2025nominees",
+    "https://www.studentgamesfestival.com/2025partners",
+    "https://www.studentgamesfestival.com/2025partners-1",
+    "https://www.studentgamesfestival.com/2025program-board",
+    "https://www.studentgamesfestival.com/2025programme",
+    "https://www.studentgamesfestival.com/2025regulations",
+    "https://www.studentgamesfestival.com/2025team",
+    "https://www.studentgamesfestival.com/about",
+    "https://www.studentgamesfestival.com/contact",
+    "https://www.studentgamesfestival.com/contest",
+    "https://www.studentgamesfestival.com/contest-regulations",
+    "https://www.studentgamesfestival.com/home",
+    "https://www.studentgamesfestival.com/job-fair",
+    "https://www.studentgamesfestival.com/jury",
+    "https://www.studentgamesfestival.com/polish-czech-videogames-forum",
+    "https://www.studentgamesfestival.com/programme",
+    "https://www.studentgamesfestival.com/regulations"
+  ],
+  "alive_probes": [],
+  "alerted": false,
+  "runs": 1,
+  "last_run": "2026-08-05T11:52:01.073052+00:00"
+}
