@@ -17,7 +17,10 @@ name: SGF 2026 watcher
 
 on:
   schedule:
-    - cron: "17 * * * *"   # every hour at :17 (off-peak minutes run sooner)
+    # Three attempts an hour, not one. GitHub silently skips ~60% of scheduled
+    # runs on free runners (worst near :00), so over-scheduling is what keeps
+    # the *effective* interval near an hour. Odd minutes avoid the rush.
+    - cron: "7,27,47 * * * *"
   workflow_dispatch:        # lets you trigger a run by hand
 
 permissions:
