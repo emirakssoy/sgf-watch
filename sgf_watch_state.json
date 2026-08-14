@@ -2,19 +2,19 @@
   "started": "2026-08-05T11:52:01.073033+00:00",
   "pages": {
     "https://www.studentgamesfestival.com/": {
-      "hash": "f9e0beacf1cb71af",
+      "hash": "a901db0448790e7b",
       "len": 2093
     },
     "https://www.studentgamesfestival.com/programme": {
-      "hash": "1bbef4a0c8d7e8e1",
+      "hash": "0936000f598925db",
       "len": 1119
     },
     "https://www.studentgamesfestival.com/jury": {
-      "hash": "987fa4ba4a2b4250",
+      "hash": "5928fce021e7417a",
       "len": 12802
     },
     "https://www.studentgamesfestival.com/regulations": {
-      "hash": "ef027843d0461b83",
+      "hash": "9da231eb9c608028",
       "len": 10914
     }
   },
@@ -42,6 +42,6 @@
   ],
   "alive_probes": [],
   "alerted": true,
-  "runs": 185,
-  "last_run": "2026-08-14T18:33:51.022770+00:00"
+  "runs": 186,
+  "last_run": "2026-08-14T19:37:32.031944+00:00"
 }
