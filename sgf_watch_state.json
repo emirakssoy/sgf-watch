@@ -2,8 +2,8 @@
   "started": "2026-08-05T11:52:01.073033+00:00",
   "pages": {
     "https://www.studentgamesfestival.com/": {
-      "hash": "63fc4929255e1c19",
-      "len": 2048
+      "hash": "136508d1d6a13edc",
+      "len": 2030
     },
     "https://www.studentgamesfestival.com/programme": {
       "hash": "50780984d4282ede",
@@ -40,7 +40,7 @@
     "https://www.studentgamesfestival.com/regulations"
   ],
   "alive_probes": [],
-  "alerted": false,
-  "runs": 176,
-  "last_run": "2026-08-14T08:49:31.032783+00:00"
+  "alerted": true,
+  "runs": 177,
+  "last_run": "2026-08-14T10:12:59.067918+00:00"
 }
