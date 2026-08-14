@@ -32,6 +32,7 @@
     "https://www.studentgamesfestival.com/contact",
     "https://www.studentgamesfestival.com/contest",
     "https://www.studentgamesfestival.com/contest-regulations",
+    "https://www.studentgamesfestival.com/edu-partners",
     "https://www.studentgamesfestival.com/home",
     "https://www.studentgamesfestival.com/job-fair",
     "https://www.studentgamesfestival.com/jury",
@@ -41,6 +42,6 @@
   ],
   "alive_probes": [],
   "alerted": true,
-  "runs": 179,
-  "last_run": "2026-08-14T12:02:58.622232+00:00"
+  "runs": 180,
+  "last_run": "2026-08-14T13:33:21.881041+00:00"
 }
